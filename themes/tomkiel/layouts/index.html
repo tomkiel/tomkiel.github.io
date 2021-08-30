@@ -1,0 +1,122 @@
+{{ define "main" }}
+<main class="main" aria-role="main">
+  <div class="profile-resume">
+    <div class="profile-avatar">
+      <picture>
+        <source srcset="{{  .Site.BaseURL }}/img/avatar/{{ .Site.Params.avatar }}.webp" type="image/webp">
+        <source srcset="{{  .Site.BaseURL }}/img/avatar/{{ .Site.Params.avatar }}.jpg" type="image/jpeg">
+        <source srcset="{{  .Site.BaseURL }}/img/avatar/{{ .Site.Params.avatar }}.png" type="image/png">
+        <img src="{{ .Site.Params.avatarFallback }}" alt="{{ .Site.Params.author }}">
+      </picture>
+    </div>
+    <div class="profile-info">
+      <h1 class="profile-name">{{ .Site.Params.author }}</h1>
+      <p class="profile-description">{{ .Site.Params.description }}</p>
+      <ul class="profile-contact">
+        {{ range $key, $value := .Site.Params.contact }}
+          <li class="profile-contact-item">
+            <a class="profile-contact-link" href="{{ $value }}" target="_blank">
+              {{ $icon := $key | printf "svg/%s.svg" }}
+              {{ partial $icon . }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+  <div class="home-content">
+
+    <div class="section blog">
+      <div class="section-header">
+        <h2 class="section-title">Meu blog</h2>
+      </div>
+
+      <div class="section-list">
+
+        {{ range first 6 ( where (where .Site.Pages "Type" "post") ".Params.draft" "=" false) }}
+
+        <div class="blog-item">
+          <div class="blog-item-image">
+            <a href="{{ .Permalink }}">
+              <picture>
+                <img src="https://i.imgur.com/MZCXwXY.jpeg" alt="{{ .Params.Title }}">
+              </picture>
+            </a>
+          </div>
+          <div class="blog-item-content">
+            <div class="blog-item-meta">
+              <h3 class="blog-item-title">{{ .Params.Title }}</h3>
+              <p class="blog-item-date">
+                <time datetime="{{ .Params.Date | time.Format "2006-01-02" }}">{{ .Params.Date | time.Format "02/01/2006" }}</time>
+              </p>
+            </div>
+            <p class="blog-item-description">{{ .Params.Description }}</p>
+            <a class="continue-reading" href="{{ .Permalink }}">Continuar lendo</a>
+          </div>
+        </div>
+
+        {{ end }}
+
+      </div>
+    </div>
+    <div class="section youtube">
+      <div class="section-header">
+        <h2 class="section-title">Vídeos</h2>
+      </div>
+      <div class="section-list">
+        {{ range first 4 .Site.Params.Youtube.Videos }}
+        <div class="youtube-item">
+          <a href="https://www.youtube.com/watch?v={{ .id }}" target="_blank">
+            <picture>
+              <source srcset="https://i.ytimg.com/vi_webp/{{ .id }}/mqdefault.webp" type="image/webp">
+              <source srcset="http://img.youtube.com/vi/{{ .id }}/mqdefault.jpg" type="image/jpeg">
+              <img src="http://img.youtube.com/vi/{{ .id }}/mqdefault.jpg" alt="">
+            </picture>
+          </a>
+        </div>
+        {{ end}}
+      </div>
+    </div>
+
+    <div class="section pexels">
+      <div class="section-header">
+        <h2 class="section-title">Pexels</h2>
+        {{ if eq $.Site.Language.LanguageName "Português" }}
+        <a href="{{ .Site.Params.Pexels.author.profilePt }}" target="_blank" class="pexels-avatar">
+          <picture>
+            <source srcset="{{ .Site.Params.Pexels.author.avatar }}" type="image/jpeg">
+            <img src="{{ .Site.Params.avatarFallbackPt }}" alt="{{ .Site.Params.Pexels.author.name }}">
+          </picture>
+          {{ .Site.Params.Pexels.author.name }}
+        </a>
+        <p>{{ .Site.Params.Pexels.author.descriptionPt }}</p>
+        {{ else }}
+        <a href="{{ .Site.Params.Pexels.author.profileEn }}">{{ .Site.Params.Pexels.author.name }}</a>
+        <p>{{ .Site.Params.Pexels.author.descriptionEn }}</p>
+        {{ end }}
+      </div>
+      <div class="section-list">
+        {{ range first 6 .Site.Params.Pexels.Pictures }}
+        <div class="pexels-item">
+          {{ if eq $.Site.Language.LanguageName "Português" }}
+            <a href="https://www.pexels.com/pt-br/foto/{{ .namePt }}-{{.id }}/" target="_blank">
+              <picture>
+                <source srcset="https://images.pexels.com/photos/{{ .id }}/pexels-photo-{{ .id }}.jpeg?auto=compress&cs=tinysrgb&h=480" type="image/jpeg">
+                <img src="https://images.pexels.com/photos/{{ .id }}/pexels-photo-{{ .id }}.jpeg?auto=compress&cs=tinysrgb&h=480" alt="{{ .namePt }}">
+              </picture>
+            </a>
+          {{ else }}
+            <a href="https://www.pexels.com/photo/{{ .nameEn }}-{{ .id }}/" target="_blank">
+              <picture>
+                <source srcset="https://images.pexels.com/photos/{{ .id }}/pexels-photo-{{ .id }}.jpeg?auto=compress&cs=tinysrgb&h=480" type="image/jpeg">
+                <img src="https://images.pexels.com/photos/{{ .id }}/pexels-photo-{{ .id }}.jpeg?auto=compress&cs=tinysrgb&h=480" alt="{{ .nameEn }}">
+              </picture>
+            </a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</main>
+{{ end }}

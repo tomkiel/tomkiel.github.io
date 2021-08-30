@@ -1,0 +1,33 @@
+.pexels {
+  margin-right: -20vw;
+  margin-left: -20vw;
+  .section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .pexels-avatar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        height: 3em;
+        border-radius: 50%;
+      }
+    }
+  }
+  .section-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    .pexels-item {
+      img {
+        width: 100%;
+        height: 25em;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}

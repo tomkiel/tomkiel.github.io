@@ -1,0 +1,17 @@
+.youtube {
+  margin-right: -20vw;
+  margin-left: -20vw;
+  .section-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    picture {
+      img {
+        width: 100%;
+        height: 18em;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}

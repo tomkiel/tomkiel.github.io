@@ -1,0 +1,134 @@
+theme = "Tomkiel"
+defaultContentLanguage = "pt"
+
+[languages]
+[languages.pt]
+title = "Meu novo site Hugo"
+baseURL = "https://tomkiel.com.br"
+languageCode = "pt"
+languageName = 'Português'
+contentDir = 'content/portuguese'
+weight = 1
+[languages.pt.menu]
+[[languages.pt.menu.main]]
+name = "Contato"
+identifier = "contact"
+weight = 2
+url = "/contato"
+[[languages.pt.menu.main]]
+name = "Sobre"
+identifier = "about"
+weight = 3
+url = "/sobre"
+
+[languages.en]
+title = "My New Hugo Site"
+baseURL = "https://tomkiel.com.br/en/"
+languageCode = "en"
+languageName = 'English'
+contentDir = 'content/english'
+weight = 2
+[languages.en.menu]
+[[languages.en.menu.main]]
+name = "Contact"
+identifier = "contact"
+weight = 2
+url = "/en/contact"
+[[languages.en.menu.main]]
+name = "About"
+identifier = "about"
+weight = 3
+url = "/en/about"
+
+[permalinks]
+fixed = ":title/"
+blog = ":slug"
+pages = ":slug"
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[params]
+author = "Regis Tomkiel"
+description = "A new Hugo site"
+avatar = "tomkiel"
+avatarFallback = "https://avatars2.githubusercontent.com/u/15989303?s=400&u=9eb0f3fdfa13bc817d392cecd23966f4ec51fea2&v=4"
+
+[params.contact]
+twitter = "https://twitter.com/registomkiel"
+github = "https://github.com/tomkiel"
+linkedin = "https://www.linkedin.com/in/registomkiel/"
+youtube = "https://www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw"
+
+
+[params.pexels]
+[params.pexels.author]
+name = "@regis-tomkiel"
+avatar = "https://images.pexels.com/users/avatars/167936/regis-tomkiel-120.jpeg?auto=compress&fit=crop&h=56&w=56"
+descriptionPt = "Regis Tomkiel"
+descriptionEn = "Regis Tomkiel"
+profilePt = "https://www.pexels.com/@regis-tomkiel-167936"
+profileEn = "https://www.pexels.com/@regis-tomkiel-167936"
+
+[[params.pexels.pictures]]
+id = "9366533"
+namePt = "camiseta-preta-homem-metal-fundo-da-natureza"
+nameEn = "man-metal-nature-background-rock-and-roll"
+
+[[params.pexels.pictures]]
+id = "9366503"
+namePt = "samambaia-fotografia-da-natureza-parque-america-do-sul"
+nameEn = "park-fern-nature-photography-south-america"
+
+[[params.pexels.pictures]]
+id = "5762079"
+namePt = "caminhada-trilha-cor-da-natureza-estilo-de-rua"
+nameEn = "hiking-nature-color-street-style-nature"
+
+[[params.pexels.pictures]]
+id = "9366504"
+namePt = "homem-metal-apontando-tatuagem"
+nameEn = "man-metal-tattoo-pointing"
+
+[[params.pexels.pictures]]
+id = "5762822"
+namePt = "azul-celeste-ceu-azul-indigo-ceu-de-brigadeiro"
+nameEn = "ambience-coniferous-trees-azure-nature"
+
+[[params.pexels.pictures]]
+id = "9366507"
+namePt = "dar-de-comer-alimentacao-feed-grunge"
+nameEn = "to do"
+
+[[params.pexels.pictures]]
+id = "5762093"
+namePt = "arena-campo-picadeiro-azul-celeste"
+nameEn = "to do"
+
+[[params.pexels.pictures]]
+id = "5761986"
+namePt = "arvoredo-rua-andando-street-natureza"
+nameEn = "to do"
+
+[params.youtube]
+channel = "UC-lHJZR3Gqxm24_Vd_AJ5Yw"
+avatar = ""
+
+[[params.youtube.videos]]
+id = "FVOfpx1g8NY"
+
+[[params.youtube.videos]]
+id = "4ozqIpd1B3Q"
+
+[[params.youtube.videos]]
+id = "8GM-p1ev40g"
+
+[[params.youtube.videos]]
+id = "sSrpxaKG764"
+
+[[params.youtube.videos]]
+id = "0odzW4GATCI"
+
+[[params.youtube.videos]]
+id = "A1Vd7HuvmIg"

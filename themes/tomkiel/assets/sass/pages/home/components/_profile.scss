@@ -1,0 +1,43 @@
+  .profile-resume {
+    order: 1;
+    display: flex;
+    gap: 4em;
+    padding: 0 20vw;
+    padding-top: var(--header-height);
+    background: linear-gradient(54deg,rgba(74,76,179,.95) 34%,hsla(0,34%,71%,.95));
+    .profile-avatar {
+      height: 100%;
+      padding-top: 2em;
+      img {
+        height: 22em;
+        width: 18em;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 0.3em;
+        box-shadow: 0 0 27px rgba(96,96,96,.34);
+      }
+    }
+    .profile-info {
+      padding-top: 2em;
+      color: var(--white-color);
+      .profile-name {
+        font-size: 2.5rem;
+      }
+      .profile-description {
+        font-size: 1.5rem;
+      }
+      .profile-contact {
+        display: flex;
+        gap: 1em;
+        li {
+          list-style: none;
+          a {
+            svg {
+              width: 1.5em;
+              fill: aliceblue;
+            }
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,28 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: var(--header-height);
+  display: flex;
+  padding: 0 20vw;
+  nav {
+    width: 100%;
+    ul {
+      height: 100%;
+      display: flex;
+      gap: 1em;
+      li {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        a {
+          text-decoration: none;
+          font-size: 1rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          color: var(--white-color);
+        }
+      }
+    }
+  }
+}
