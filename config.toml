@@ -1,3 +1,4 @@
+baseURL = "https://tomkiel.com.br"
 theme = "Tomkiel"
 defaultContentLanguage = "pt"
 
