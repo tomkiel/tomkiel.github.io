@@ -2,8 +2,9 @@
 {{ $src := .Get "src" }}
 {{ $image := resources.Get $src }}
 {{ $imageLQ := $image.Resize "600x webp q80" }}
-{{ $imageMQ := $image.Resize "1000x webp q80" }} {{ $imageHQ := $image.Resize
-"1400x webp q100" }} {{ $imageJPG := $image.Resize "1400x jpg q100" }}
+{{ $imageMQ := $image.Resize "1000x webp q80" }}
+{{ $imageHQ := $image.Resize "1400x webp q100" }}
+{{ $imageJPG := $image.Resize "1400x jpg q100" }}
 <figure>
     <picture>
         <source srcset="{{ $imageLQ.Permalink }}" width="{{ $imageLQ.Width }}"
