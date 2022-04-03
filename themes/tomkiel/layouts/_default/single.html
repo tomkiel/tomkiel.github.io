@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="single-post">
+  <div class="container single-container page">
+      <article>
+          <div class="article-header">
+              <h1>{{ .Title }}</h1>
+              <div class="article-description">
+                  <p>{{ .Description }}</p>
+              </div>
+          </div>
+          <div class="article-grid">
+              <div class="article-content">
+                  <div class="article-thumbnail">
+                    {{- partial "picture" . -}}
+                  </div>
+                  <div class="content">
+                      {{ .Content }}
+                  </div>
+              </div>
+          </div>
+      </article>
+      <section id="isso-thread" class="comments"></section>
+  </div>
+</div>
+{{ end }}

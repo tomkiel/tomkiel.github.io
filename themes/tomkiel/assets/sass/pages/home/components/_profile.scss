@@ -2,42 +2,88 @@
     order: 1;
     display: flex;
     gap: 4em;
-    padding: 0 20vw;
-    padding-top: var(--header-height);
-    background: linear-gradient(54deg,rgba(74,76,179,.95) 34%,hsla(0,34%,71%,.95));
+    padding: var(--header-height) 20vw 0;
+    background: var(--primary-color);
+    min-height: 33vh;
+    @media screen and (max-width: 990px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @media screen and (max-width: 1220px) {
+      padding: var(--header-height) 4vw 0;
+    }
     .profile-avatar {
       height: 100%;
-      padding-top: 2em;
+      padding-top: 2rem;
+      margin-bottom: -4rem;
       img {
-        height: 22em;
-        width: 18em;
+        border-radius: var(--border-radius);
+        width: 18rem;
+        height: 22rem;
         object-fit: cover;
         object-position: center;
-        border-radius: 0.3em;
         box-shadow: 0 0 27px rgba(96,96,96,.34);
+
+        @media screen and (max-width: 1220px) {
+          width: 12rem;
+          height: 14rem;
+         }
+
+         @media screen and (max-width: 760px) {
+          width: 8rem;
+          height: 10rem;
+         }
       }
     }
     .profile-info {
-      padding-top: 2em;
-      color: var(--white-color);
+      padding-top: 4rem;
       .profile-name {
         font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--white-color);
       }
       .profile-description {
-        font-size: 1.5rem;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: var(--white-color);
       }
       .profile-contact {
+        margin-top: 1rem;
         display: flex;
-        gap: 1em;
+        gap: 0.5em;
         li {
           list-style: none;
           a {
             svg {
-              width: 1.5em;
-              fill: aliceblue;
+              width: 1.5rem;
+              fill: var(--white-color);
+              @media screen and (max-width: 990px) {
+                width: 2rem;
+              }
             }
           }
         }
+      }
+      @media screen and (max-width: 990px) {
+        padding-top: 1rem;
+        text-align: center;
+        .profile-name {
+          font-size: 1.8rem;
+        }
+        .profile-description {
+          margin-top: 0.5rem;
+          font-size: 1.1rem;
+        }
+        .profile-contact { 
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          justify-content: center;
+        }
+      }
+      @media screen and (max-width: 1220px) {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
       }
     }
   }

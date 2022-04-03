@@ -1,5 +1,6 @@
 +++
 title = "Home"
+description = "Home"
 [menu.main]
   name = "Home"
   identifier = "home"

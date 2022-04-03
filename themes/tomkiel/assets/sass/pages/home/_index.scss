@@ -1,7 +1,4 @@
 .main {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 45vh auto;
 
   @import "./components/profile";
   @import "./components/home-content";

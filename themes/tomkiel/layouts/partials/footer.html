@@ -1,3 +1,85 @@
 <footer>
-  
+    <div class="container">
+        <section class="menu">
+            <div class="menu-container about">
+                <a href="{{ .Site.BaseURL }}" class="brand" rel="home">
+                    <figure>
+                        <picture>
+                            <img src="{{ .Site.Params.gravatar }}" alt=" logo" width="120">
+                        </picture>
+                    </figure>
+                </a>
+                <div class="description">
+                    <p>
+                        {{ .Site.Params.Biography }}
+                    </p>
+                    <div class="social">
+                        <ul>
+                            {{ range $key, $value := .Site.Params.contact }}
+                            <li>
+                                <a class="profile-contact-link" href="{{ $value }}" target="_blank">
+                                    {{ $icon := $key | printf "svg/%s.svg" }}
+                                    {{ partial $icon . }}
+                                </a>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-container company">
+                <h3>{{ T "free_software" }}</h3>
+                <div class="footer-links">
+                    <ul>
+                        {{ range .Site.Menus.free_software }}
+                        <li>
+                            <a href="{{ .URL | absLangURL }}">
+                                {{ .Name }}
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-container support">
+                <h3>{{ T "development" }}</h3>
+                <div class="footer-links">
+                    <ul>
+                        {{ range .Site.Menus.development }}
+                        <li>
+                            <a href="{{ .URL | absLangURL }}">
+                                {{ .Name }}
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-container contact">
+                <h3>{{ T "contact" }}</h3>
+                <div class="footer-links">
+                    <ul>
+                        <li>
+                            <address>
+                                {{ .Site.Params.City }} - {{ T "brasil" }}
+                            </address>
+                        </li>
+                        <li>
+                            <span>E-mail: </span>
+                            <a href="mailto:{{ .Site.Params.Email }}">
+                                {{ .Site.Params.Email }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="legal">
+            <div class="copyright">
+                <span>© {{ dateFormat "2006" now }} {{ humanize .Site.Params.Avatar }}. {{ T "footer" }}</span>
+            </div>
+            <div class="important">
+            </div>
+        </section>
+    </div>
 </footer>

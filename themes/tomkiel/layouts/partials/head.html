@@ -1,38 +1,33 @@
 <head>
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
   <meta name="HandheldFriendly" content="true">
-
-  <meta name="ahrefs-site-verification" content="">
-  <meta name="google-site-verification" content="" />
-
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
 
   <meta name="format-detection" content="telephone=no" />
   <meta name="format-detection" content="address=no" />
 
-  <meta name="description" content="">
-  <title>{{ .Title }}</title>
+  <title>{{ .Title }} - {{ .Site.Params.Author }}</title>
 
-  <link rel="canonical" href="">
+  <meta name="description" content="{{ .Description }}">
+
+  <link rel="canonical" href="{{ .Permalink }}">
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:description" content="" />
+  <meta property="og:title" content="{{ .Title }}" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:description" content="{{ .Description }}" />
 
   <meta property="og:image" content="" />
-  <meta property="og:image:secure_url" content="" />
-
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="628" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="" />
-  <meta name="twitter:description" content="" />
+  <meta name="twitter:title" content="{{ .Title }}" />
+  <meta name="twitter:description" content="{{ .Description }}" />
   <meta name="twitter:image" content="" />
 
   <meta name="apple-mobile-web-app-title" content="">
@@ -41,8 +36,14 @@
   <meta name="msapplication-TileImage" content="">
   <meta name="theme-color" content="#ffffff">
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" type="text/css" media="all">
+
   {{ $sass := resources.Get "sass/main.scss" }}
   {{ $style := $sass | resources.ToCSS }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+  {{ $prism := resources.Get "css/lib/prism.css" }}
+  <link rel="stylesheet" href="{{ $prism.Permalink }}">
+
 
 </head>

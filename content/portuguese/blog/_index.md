@@ -1,5 +1,6 @@
 +++
-title = "Blog"
+title = "Meus posts"
+description = "Minhas postagens mais recentes"
 [menu.main]
   name = "Blog"
   identifier = "blog"

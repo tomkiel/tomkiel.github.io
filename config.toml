@@ -1,45 +1,79 @@
 baseURL = "https://tomkiel.com.br"
-theme = "Tomkiel"
-defaultContentLanguage = "pt"
+theme = "tomkiel"
+defaultContentLanguage = "pt-br"
 
 [languages]
-[languages.pt]
-title = "Meu novo site Hugo"
+[languages.pt-br]
+title = "Regis Tomkiel"
+biography = "Sou desenvolvedor de software, criador de conteúdo, vegetariano estrito, desenvolvedor e entusiasta de Software Livre/Open Source."
+description = ""
+pexelsBiography = "Conheça mais sobre mim com minhas fotos no Pexels (Sem royalties)."
 baseURL = "https://tomkiel.com.br"
-languageCode = "pt"
-languageName = 'Português'
-contentDir = 'content/portuguese'
+languageCode = "pt-br"
+languageName = "Português"
+contentDir = "content/portuguese"
 weight = 1
-[languages.pt.menu]
-[[languages.pt.menu.main]]
-name = "Contato"
-identifier = "contact"
-weight = 2
-url = "/contato"
-[[languages.pt.menu.main]]
-name = "Sobre"
-identifier = "about"
-weight = 3
-url = "/sobre"
+
+[[languages.pt-br.menu.free_software]]
+name = "Ubuntu"
+identifier = "ubuntu"
+weight = 1
+url = "/"
+
+[[languages.pt-br.menu.development]]
+name = "Python"
+identifier = "python"
+weight = 1
+url = "/"
+
 
 [languages.en]
-title = "My New Hugo Site"
+title = "Regis Tomkiel"
+biography = "I'm a Software Developer, content creator, strict vegetarian, Free Software/Open Source developer and enthusiast."
+description = ""
+pexelsBiography = "Know more about me with my photos on Pexels (No royalties)"
 baseURL = "https://tomkiel.com.br/en/"
 languageCode = "en"
-languageName = 'English'
-contentDir = 'content/english'
+languageName = "English"
+contentDir = "content/english"
 weight = 2
-[languages.en.menu]
-[[languages.en.menu.main]]
-name = "Contact"
-identifier = "contact"
+
+[[languages.en.menu.free_software]]
+name = "Ubuntu"
+identifier = "ubuntu"
+weight = 1
+url = "/"
+
+[[languages.en.menu.development]]
+name = "Python"
+identifier = "python"
+weight = 1
+url = "/"
+
+
+[languages.pl-pl]
+title = "Regis Tomkiel"
+biography = "Jestem programistą, twórcą treści, wegetarianinem, programistą Wolnego Oprogramowania/Open Source i entuzjastą."
+description = ""
+pexelsBiography = "Zobacz więcej o mnie z moimi zdjęciami na Pexels (Bez praw autorskich)"
+baseURL = "https://tomkiel.com.br/pl/"
+languageCode = "pl-pl"
+languageName = "Polski"
+contentDir = "content/polish"
 weight = 2
-url = "/en/contact"
-[[languages.en.menu.main]]
-name = "About"
-identifier = "about"
-weight = 3
-url = "/en/about"
+
+[[languages.pl-pl.menu.free_software]]
+name = "Ubuntu"
+identifier = "ubuntu"
+weight = 1
+url = "/"
+
+[[languages.pl-pl.menu.development]]
+name = "Python"
+identifier = "python"
+weight = 1
+url = "/"
+
 
 [permalinks]
 fixed = ":title/"
@@ -52,25 +86,26 @@ category = "categories"
 
 [params]
 author = "Regis Tomkiel"
-description = "A new Hugo site"
 avatar = "tomkiel"
 avatarFallback = "https://avatars2.githubusercontent.com/u/15989303?s=400&u=9eb0f3fdfa13bc817d392cecd23966f4ec51fea2&v=4"
+gravatar = "https://s.gravatar.com/avatar/03bfd85dd34f821bf412a52ad89d0ef7?s=80=g"
+email = "me@tomkiel.com.br"
+city = "Caxias do Sul"
+image = "images/tomkiel.jpg"
+gtag = "G-YRW7Z15SDD"
 
 [params.contact]
-twitter = "https://twitter.com/registomkiel"
+youtube = "https://www.youtube.com/c/TomkielTV"
+twitter = "https://twitter.com/tomtomkiel"
 github = "https://github.com/tomkiel"
-linkedin = "https://www.linkedin.com/in/registomkiel/"
-youtube = "https://www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw"
-
+linkedin = "https://www.linkedin.com/in/regis-tomkiel/"
+instagram = "https://www.instagram.com/registomkiel/"
 
 [params.pexels]
 [params.pexels.author]
 name = "@regis-tomkiel"
 avatar = "https://images.pexels.com/users/avatars/167936/regis-tomkiel-120.jpeg?auto=compress&fit=crop&h=56&w=56"
-descriptionPt = "Regis Tomkiel"
-descriptionEn = "Regis Tomkiel"
-profilePt = "https://www.pexels.com/@regis-tomkiel-167936"
-profileEn = "https://www.pexels.com/@regis-tomkiel-167936"
+profile = "@regis-tomkiel-167936"
 
 [[params.pexels.pictures]]
 id = "9366533"
@@ -78,9 +113,9 @@ namePt = "camiseta-preta-homem-metal-fundo-da-natureza"
 nameEn = "man-metal-nature-background-rock-and-roll"
 
 [[params.pexels.pictures]]
-id = "9366503"
-namePt = "samambaia-fotografia-da-natureza-parque-america-do-sul"
-nameEn = "park-fern-nature-photography-south-america"
+id = "11204690"
+namePt = "apartamento-arquitetura-construcao-predio"
+nameEn = "to do"
 
 [[params.pexels.pictures]]
 id = "5762079"
@@ -88,29 +123,19 @@ namePt = "caminhada-trilha-cor-da-natureza-estilo-de-rua"
 nameEn = "hiking-nature-color-street-style-nature"
 
 [[params.pexels.pictures]]
-id = "9366504"
-namePt = "homem-metal-apontando-tatuagem"
-nameEn = "man-metal-tattoo-pointing"
-
-[[params.pexels.pictures]]
 id = "5762822"
 namePt = "azul-celeste-ceu-azul-indigo-ceu-de-brigadeiro"
 nameEn = "ambience-coniferous-trees-azure-nature"
 
 [[params.pexels.pictures]]
-id = "9366507"
-namePt = "dar-de-comer-alimentacao-feed-grunge"
-nameEn = "to do"
+id = "9366504"
+namePt = "homem-metal-apontando-tatuagem"
+nameEn = "man-metal-tattoo-pointing"
 
 [[params.pexels.pictures]]
-id = "5762093"
-namePt = "arena-campo-picadeiro-azul-celeste"
-nameEn = "to do"
-
-[[params.pexels.pictures]]
-id = "5761986"
-namePt = "arvoredo-rua-andando-street-natureza"
-nameEn = "to do"
+id = "11204685"
+namePt = "samambaia-fotografia-da-natureza-parque-america-do-sul"
+nameEn = "park-fern-nature-photography-south-america"
 
 [params.youtube]
 channel = "UC-lHJZR3Gqxm24_Vd_AJ5Yw"

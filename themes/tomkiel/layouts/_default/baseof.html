@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
+<html lang="{{ .Page.Language.Params.languageCode }}">
+{{- partial "head.html" . -}}
+
+<body>
+    {{- partial "header.html" . -}}
+    <div id="content">
         {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer.html" . -}}
-    </body>
+    </div>
+    {{- partial "footer.html" . -}}
+
+    {{- $options := dict "targetPath" "js/bundle.js" -}}
+    {{- $main := resources.Get "js/main.js" | js.Build $options | resources.Minify | fingerprint -}}
+    <script src="{{ $main.Permalink }}" integrity="{{ $main.Data.Integrity }}" defer></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.Gtag }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{{ .Site.Params.Gtag }}');
+    </script>
+    <script data-isso="https://cm.tomkiel.com.br/" data-isso-avatar="true" data-isso-lang="pt" src="https://cm.tomkiel.com.br/js/embed.min.js"></script>
+    
+    {{- $prism := resources.Get "js/lib/prism.js" | js.Build (dict "targetPath" "js/prism.js") | resources.Minify | fingerprint -}}
+    <script src="{{ $prism.Permalink }}" integrity="{{ $prism.Data.Integrity }}" defer></script>
+</body>
+
 </html>

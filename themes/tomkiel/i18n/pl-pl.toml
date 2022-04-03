@@ -1,0 +1,38 @@
+[brasil]
+  other = "Brazylia"
+
+[footer]
+  other = "Wszelkie prawa zastrzeżone"
+
+[search]
+  other = "Szukaj"
+
+[submit]
+  other = "Składać"
+
+[prev]
+  other = "Poprzedni"
+
+[next]
+  other = "Następny"
+
+[my_blog]
+  other = "Moje posty na blogu"
+
+[my_videos]
+  other = "Moje filmy z YouTube"
+
+[my_projects]
+  other = "Moje projekty"
+
+[view_all_posts]
+  other = "Zobacz wszystkie posty"
+
+[free_software]
+  other = "Darmowe Oprogramowanie"
+
+[development]
+  other = "Rozwój"
+
+[contact]
+  other = "Kontakt"

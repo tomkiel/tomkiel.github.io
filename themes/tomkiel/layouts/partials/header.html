@@ -1,12 +1,58 @@
 <header>
-    <nav>
-        <ul>
-            {{ $currentPage := . }}
-            {{ range .Site.Menus.main }}
-            <li {{ if or ($currentPage.IsMenuCurrent "main" . ) ($currentPage.HasMenuCurrent "main" . )}} class="current-menu" {{ end }}>
-                <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
-            </li>
-            {{ end }}
-        </ul>
+    <nav class="container">
+        <div class="content">
+            <ul class="menu-links">
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main }}
+                <li
+                    class='menu-item{{ if or ($currentPage.IsMenuCurrent "main" . ) ($currentPage.HasMenuCurrent "main" . )}} current-menu {{ end }}'>
+                    <a class="link" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
+            </ul>
+            <div class="menu-responsive">
+                <button class="btn no-border" id="hamburger-menu" aria-label="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="menu-links-responsive" id="responsive-menu-items">
+                    <ul class="menu-links">
+                        {{ range .Site.Menus.main }}
+                        <li
+                            class='menu-item{{ if or ($currentPage.IsMenuCurrent "main" . ) ($currentPage.HasMenuCurrent "main" . )}} current-menu {{ end }}'>
+                            <a class="link" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+            <div class="actions">
+                {{ range $.Site.Home.AllTranslations }}
+                {{ if eq $.Site.Language.LanguageName "English" }}
+                {{ if ne .Language.LanguageName "English" }}
+                <a href="{{ .Permalink }}" class="btn white language {{ .Page.Language.Params.languageCode }}">
+                    {{ .Language.LanguageName }}
+                </a>
+                {{ end }}
+                {{ else if eq $.Site.Language.LanguageName "Português" }}
+                {{ if ne .Language.LanguageName "Português" }}
+                <a href="{{ .Permalink }}" class="btn white language {{ .Page.Language.Params.languageCode }}">
+                    {{ .Language.LanguageName }}
+                </a>
+                {{ end }}
+                {{ else }}
+                {{ if ne .Language.LanguageName "Polski" }}
+                <a href="{{ .Permalink }}" class="btn white language {{ .Page.Language.Params.languageCode }}">
+                    {{ .Language.LanguageName }}
+                </a>
+                {{ end }}
+                {{ end }}
+                {{ end}}
+            </div>
+        </div>
     </nav>
 </header>

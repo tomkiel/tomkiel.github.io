@@ -1,17 +1,12 @@
 {{ define "main" }}
-<main class="main" aria-role="main">
+<main class="main">
   <div class="profile-resume">
     <div class="profile-avatar">
-      <picture>
-        <source srcset="{{  .Site.BaseURL }}/img/avatar/{{ .Site.Params.avatar }}.webp" type="image/webp">
-        <source srcset="{{  .Site.BaseURL }}/img/avatar/{{ .Site.Params.avatar }}.jpg" type="image/jpeg">
-        <source srcset="{{  .Site.BaseURL }}/img/avatar/{{ .Site.Params.avatar }}.png" type="image/png">
-        <img src="{{ .Site.Params.avatarFallback }}" alt="{{ .Site.Params.author }}">
-      </picture>
+      {{- partial "picture" . -}}
     </div>
     <div class="profile-info">
       <h1 class="profile-name">{{ .Site.Params.author }}</h1>
-      <p class="profile-description">{{ .Site.Params.description }}</p>
+      <p class="profile-description">{{ .Site.Params.biography }}</p>
       <ul class="profile-contact">
         {{ range $key, $value := .Site.Params.contact }}
           <li class="profile-contact-item">
@@ -25,98 +20,103 @@
     </div>
   </div>
   <div class="home-content">
-
-    <div class="section blog">
+    <section class="section blog">
       <div class="section-header">
-        <h2 class="section-title">Meu blog</h2>
+        <h2 class="section-title">{{ T "my_blog" }}</h2>
       </div>
-
       <div class="section-list">
-
         {{ range first 6 ( where (where .Site.Pages "Type" "post") ".Params.draft" "=" false) }}
-
-        <div class="blog-item">
+        <article class="blog-item">
           <div class="blog-item-image">
             <a href="{{ .Permalink }}">
-              <picture>
-                <img src="https://i.imgur.com/MZCXwXY.jpeg" alt="{{ .Params.Title }}">
-              </picture>
+              {{- partial "picture" . -}}
             </a>
           </div>
-          <div class="blog-item-content">
-            <div class="blog-item-meta">
-              <h3 class="blog-item-title">{{ .Params.Title }}</h3>
-              <p class="blog-item-date">
-                <time datetime="{{ .Params.Date | time.Format "2006-01-02" }}">{{ .Params.Date | time.Format "02/01/2006" }}</time>
-              </p>
+            <div class="blog-item-content">
+              <div class="item-category">
+                {{ range $key, $value := .Params.Categories }}
+                <a class="category tag" href='{{ $.Site.BaseURL }}/categories/{{ replace $value " " "-" }}'>
+                  {{ humanize $value }}
+                </a>
+                {{ end }}
+              </div>
+              <div class="blog-item-meta">
+                <h3 class="blog-item-title">
+                  <a href="{{ .Permalink }}">
+                    {{ .Params.Title }}
+                  </a>
+                </h3>
+                <p class="blog-item-date">
+                  <time datetime="{{ .Params.Date | time.Format "2006-01-02" }}">
+                  {{ .Params.Date | time.Format "01 de Jan de 2006" }}
+                  </time>
+                </p>
+              </div>
+              <a href="{{ .Permalink }}" class="blog-item-description">
+                {{ .Params.Description }}
+              </a>
             </div>
-            <p class="blog-item-description">{{ .Params.Description }}</p>
-            <a class="continue-reading" href="{{ .Permalink }}">Continuar lendo</a>
-          </div>
-        </div>
-
+        </article>
         {{ end }}
-
       </div>
-    </div>
-    <div class="section youtube">
+      <div class="section-footer">
+        <a href="{{ .Site.BaseURL }}/blog" class="section-footer-link">
+           {{ T "view_all_posts" }}
+        </a>
+      </div>
+    </section>
+    <section class="section youtube">
       <div class="section-header">
-        <h2 class="section-title">Vídeos</h2>
+        <h2 class="section-title">{{ T "my_videos" }}</h2>
       </div>
       <div class="section-list">
-        {{ range first 4 .Site.Params.Youtube.Videos }}
-        <div class="youtube-item">
-          <a href="https://www.youtube.com/watch?v={{ .id }}" target="_blank">
+        {{ range $index, $item := .Site.Params.Youtube.Videos }}
+        <div class="youtube-item item--{{ $index }}">
+          <a href="https://www.youtube.com/watch?v={{ $item.id }}" target="_blank">
             <picture>
-              <source srcset="https://i.ytimg.com/vi_webp/{{ .id }}/mqdefault.webp" type="image/webp">
-              <source srcset="http://img.youtube.com/vi/{{ .id }}/mqdefault.jpg" type="image/jpeg">
-              <img src="http://img.youtube.com/vi/{{ .id }}/mqdefault.jpg" alt="">
+              <source srcset="https://i.ytimg.com/vi_webp/{{ $item.id }}/maxresdefault.webp" type="image/webp">
+              <source srcset="http://img.youtube.com/vi/{{ $item.id }}/maxresdefault.jpg" type="image/jpeg">
+              <img src="http://img.youtube.com/vi/{{ $item.id }}/maxresdefault.jpg" alt="" loading=lazy>
             </picture>
           </a>
         </div>
         {{ end}}
       </div>
-    </div>
-
-    <div class="section pexels">
+    </section>
+    <section class="section pexels">
       <div class="section-header">
         <h2 class="section-title">Pexels</h2>
-        {{ if eq $.Site.Language.LanguageName "Português" }}
-        <a href="{{ .Site.Params.Pexels.author.profilePt }}" target="_blank" class="pexels-avatar">
+        <a href='https://www.pexels.com/{{ if ne .Page.Language.Params.languageCode "en"}}{{ .Page.Language.Params.languageCode }}/{{ end }}{{ .Site.Params.Pexels.Author.Profile }}' target="_blank" class="pexels-avatar">
           <picture>
-            <source srcset="{{ .Site.Params.Pexels.author.avatar }}" type="image/jpeg">
-            <img src="{{ .Site.Params.avatarFallbackPt }}" alt="{{ .Site.Params.Pexels.author.name }}">
+            <source srcset="{{ .Site.Params.Pexels.Author.Avatar }}" type="image/jpeg">
+            <img src="{{ .Site.Params.Pexels.Author.Avatar }}" alt="{{ .Site.Params.Pexels.Author.Name }}" width="50px" height="50px" loading=lazy>
           </picture>
-          {{ .Site.Params.Pexels.author.name }}
+          {{ .Site.Params.Pexels.Author.Name }}
         </a>
-        <p>{{ .Site.Params.Pexels.author.descriptionPt }}</p>
-        {{ else }}
-        <a href="{{ .Site.Params.Pexels.author.profileEn }}">{{ .Site.Params.Pexels.author.name }}</a>
-        <p>{{ .Site.Params.Pexels.author.descriptionEn }}</p>
-        {{ end }}
+        <p>{{ .Site.Params.PexelsBiography }}</p>
       </div>
       <div class="section-list">
-        {{ range first 6 .Site.Params.Pexels.Pictures }}
-        <div class="pexels-item">
+        {{ range $index, $item := .Site.Params.Pexels.Pictures }}
+        <div class="pexels-item item--{{ $index }}">
           {{ if eq $.Site.Language.LanguageName "Português" }}
-            <a href="https://www.pexels.com/pt-br/foto/{{ .namePt }}-{{.id }}/" target="_blank">
+            <a href="https://www.pexels.com/pt-br/foto/{{ .namePt }}-{{ $item.id }}/" target="_blank">
               <picture>
-                <source srcset="https://images.pexels.com/photos/{{ .id }}/pexels-photo-{{ .id }}.jpeg?auto=compress&cs=tinysrgb&h=480" type="image/jpeg">
-                <img src="https://images.pexels.com/photos/{{ .id }}/pexels-photo-{{ .id }}.jpeg?auto=compress&cs=tinysrgb&h=480" alt="{{ .namePt }}">
+                <source srcset="https://images.pexels.com/photos/{{ $item.id }}/pexels-photo-{{ $item.id }}.jpeg?auto=compress&cs=tinysrgb&h=480" type="image/jpeg">
+                <img src="https://images.pexels.com/photos/{{ $item.id }}/pexels-photo-{{ $item.id }}.jpeg?auto=compress&cs=tinysrgb&h=480" alt="{{ $item.namePt }}" loading=lazy>
               </picture>
             </a>
           {{ else }}
-            <a href="https://www.pexels.com/photo/{{ .nameEn }}-{{ .id }}/" target="_blank">
+            <a href="https://www.pexels.com/photo/{{ .nameEn }}-{{ $item.id }}/" target="_blank">
               <picture>
-                <source srcset="https://images.pexels.com/photos/{{ .id }}/pexels-photo-{{ .id }}.jpeg?auto=compress&cs=tinysrgb&h=480" type="image/jpeg">
-                <img src="https://images.pexels.com/photos/{{ .id }}/pexels-photo-{{ .id }}.jpeg?auto=compress&cs=tinysrgb&h=480" alt="{{ .nameEn }}">
+                <source srcset="https://images.pexels.com/photos/{{ $item.id }}/pexels-photo-{{ $item.id }}.jpeg?auto=compress&cs=tinysrgb&h=480" type="image/jpeg">
+                <img src="https://images.pexels.com/photos/{{ $item.id }}/pexels-photo-{{ $item.id }}.jpeg?auto=compress&cs=tinysrgb&h=480" alt="{{ $item.nameEn }}" loading=lazy>
               </picture>
             </a>
           {{ end }}
         </div>
         {{ end }}
       </div>
-    </div>
+    </section>
   </div>
 </main>
 {{ end }}
