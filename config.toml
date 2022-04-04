@@ -1,6 +1,7 @@
 baseURL = "https://tomkiel.com.br"
 theme = "tomkiel"
 defaultContentLanguage = "pt-br"
+enableRobotsTXT = true
 
 [languages]
 [languages.pt-br]
