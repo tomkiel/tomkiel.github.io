@@ -48,7 +48,7 @@
                 </h3>
                 <p class="blog-item-date">
                   <time datetime="{{ .Params.Date | time.Format "2006-01-02" }}">
-                  {{ .Params.Date | time.Format "01 de Jan de 2006" }}
+                  {{ .Params.Date | time.Format ":date_medium" }}
                   </time>
                 </p>
               </div>

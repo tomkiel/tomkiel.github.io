@@ -8,42 +8,17 @@ description = "Hello strange traveler! 🖖 Here's a little about me."
   url = "/regis-tomkiel"
 +++
 
-{{<image src="images/tomkiel_petista.jpg" alt="A photo of left-wing demonstration with PT leadership in Caxias do Sul" caption="A photo with PT leader (Pepe Vargas) in Caxias do Sul - 2021">}}
-### Who am I?
-I'm a Brazilian software developer, born in a country town called [Alpestre](https://www.alpestre.rs.gov.br/ and living in Caxias do Sul.  
-I started my professional life working with IT support, changing computer parts, installing Windows, and managing servers.  
-Soon after, I worked as a ***freelancer*** after I created, and managed a web agency, and even managed a heavy metal band.
+{{<image src="images/tomkiel_about.jpg" alt="Picture of me Participating in an event for the Python community in Southern Brazil" caption="Participating in an event for the Python community in South of Brazil">}}
+### Who Am I?  
 
-### What do I do?
-I'm [Full Stack](https://www.linkedin.com/in/regis-tomkiel) web developer at [ThoughtWorks](https://www.thoughtworks.com/). I love learning new technologies, creating content, and learning from people.    
-My domain languages and technologies:
- - [Python](https://www.python.org/)
- - [PHP](https://www.php.net/)
- - [Java](https://www.java.com/pt_BR/)
- - [JavaScript](https://www.javascript.com/)
- - [React](https://reactjs.org/)
- - [Node.js](https://nodejs.org/)
- - [HTML](https://www.w3.org/TR/html/)
- - [CSS](https://www.w3.org/Style/)
- - ...
+I am a Software Engineer with over 8 years of experience in web development. I have extensive knowledge of languages such as JavaScript, TypeScript, Python, Java, and PHP, as well as hands-on experience with modern frameworks like React, Angular, Spring Boot, Flask, and Laravel. Currently, I work as a Software Engineer at Thoughtworks, contributing to high-impact projects such as developing e-commerce platforms using micro-frontend architecture and scalable CMS solutions for global companies.  
 
-I recently started a web framework project in Python using MVC architecture, inspired by the PHP Framework [Laravel](https://laravel.com/). You can learn more about the project by going to my [GitHub](https://github.com/getfalafel).
+I have experience leading teams as a Tech Lead and managing stakeholders in complex projects. I thrive in multi-technology environments, working with tools like AWS, Docker, Jenkins, and PostgreSQL, as well as testing frameworks like Vitest. In one of my most challenging projects, I worked on data processing with machine learning to enhance customer experience and decision-making processes.  
 
-### What moves me?
-I am a strict vegetarian, atheist, Free Software, and animal rights enthusiast.
-Since I stopped eating animals, I was able to experience a different view of the world. Not always comfortable, despite human cruelty, the universe is captivating and beautiful.
-I don't believe in creative entities, all I see is the beauty of chance, natural laws. Life always finds a way to fill the voids.
+I am also the co-founder of **FOSSDay**, an initiative that promotes the use of open-source software. Additionally, I have led the development of tailored solutions for startups and mid-sized companies. I am passionate about collaborating with the tech community, participating in events and organizations like Tchelinux.  
 
-I'm a [Star Trek](https://pt.wikipedia.org/wiki/Star_Trek) fan and I refuse to believe that the future promised in the stories, with inequality ending, is a dream.
-Star Trek offers us a world without money, animal abuse, and inequality. These are things worth dreaming about.
+I hold a degree in Information Systems from the University of Caxias do Sul and have advanced proficiency in English. I also create technical content to share knowledge through my website, **tomkiel.com.br**, and my YouTube channel, **TomkielTV**.  
 
-As a child, I wanted to be a historian or a cosmonaut, because I loved discovery, stories, and the constant quest to understand the past and future. As you can see, I didn't become either of them. I chose to try to change the world with technology.   
-
-My life goal is to fight against inequality and animal abuse!
-
-> The Earth is a very small stage in a vast cosmic arena. Think of the rivers of blood spilled by all those generals and emperors so that, in glory and triumph, they could become the momentary masters of a fraction of a dot. Think of the endless cruelties visited by the inhabitants of one corner of this pixel on the scarcely distinguishable inhabitants of some other corner, how frequent their misunderstandings, how eager they are to kill one another, how fervent their hatreds.  
-> [Carl Sagan](https://en.wikipedia.org/wiki/Carl_Sagan)
-
-
-
+> Earth is a very small stage in a vast cosmic arena. Think of the rivers of blood spilled by all those generals and emperors so that, in glory and triumph, they could become momentary masters of a fraction of a dot. Think of the endless cruelties visited by the inhabitants of one corner of this pixel on the scarcely distinguishable inhabitants of some other corner, how frequent their misunderstandings, how eager they are to kill one another, how fervent their hatreds.  
+> [Carl Sagan](https://en.wikipedia.org/wiki/Carl_Sagan)  
 

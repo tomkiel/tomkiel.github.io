@@ -8,38 +8,16 @@ description = "Olá estranho viajante! 🖖 Aqui está um pouco sobre mim."
   url = "/regis-tomkiel"
 +++
 
-{{<image src="images/tomkiel_petista.jpg" alt="Foto manifestação de esquerda com liderança do PT de Caxias do Sul" caption="Foto manifestação de esquerda com liderança do PT (Pepe Vargas) de Caxias do Sul - 2021">}}
+{{<image src="images/tomkiel_about.jpg" alt="Foto participando de evento da comunidade Python da Rregião Sul do Brasil" caption="Participando de evento da comunidade Python da Rregião Sul do Brasil">}}
+
 ### Quem eu sou?
-Sou desenvolvedor de software brasileiro, nascido em uma cidade do interior chamada [Alpestre](https://www.alpestre.rs.gov.br/) e morando em Caxias do Sul.  
-Comecei minha vida profissional trabalhando com suporte de TI, trocando peças de computadores, instalando Windows e gerenciando servidores.
-Logo depois, trabalhei como ***freelancer*** depois que criei e gerenciei uma agência web, e até gerenciei uma banda de heavy metal.
+Sou Engenheiro de Software com mais de 8 anos de experiência no desenvolvimento de projetos web. Tenho amplo conhecimento em linguagens como JavaScript, TypeScript, Python, Java e PHP e experiência prática com frameworks modernos, como React, Angular, Spring Boot, Flask e Laravel. Atualmente, atuo como Software Engineer na Thoughtworks, onde contribuo para projetos de alto impacto, como o desenvolvimento de e-commerces utilizando arquitetura de micro frontends e soluções CMS escaláveis para empresas globais.
 
-### O que eu faço?
-Sou desenvolvedor web [Full Stack](https://www.linkedin.com/in/regis-tomkiel) na [ThoughtWorks](https://www.thoughtworks.com/pt-br). Adoro aprender novas tecnologias, criar conteúdo e aprender com as pessoas.
-Entre as linguagens e tecnologias que trabalho, estão:
- - [Python](https://www.python.org/)
- - [PHP](https://www.php.net/)
- - [Java](https://www.java.com/pt_BR/)
- - [JavaScript](https://www.javascript.com/)
- - [React](https://reactjs.org/)
- - [Node.js](https://nodejs.org/)
- - [HTML](https://www.w3.org/TR/html/)
- - [CSS](https://www.w3.org/Style/)
- - ...
+Tenho experiência em liderar equipes como Tech Lead, além de gerenciar stakeholders em projetos complexos. Trabalho em ambientes multi-tecnologia, lidando com ferramentas como AWS, Docker, Jenkins e PostgreSQL, e frameworks de teste como Vitest. Em um dos meus projetos mais desafiadores, atuei no processamento de dados com machine learning para melhorar a experiência do cliente e a tomada de decisão.
 
-Recentemente iniciei um projeto de framework web em Python utilizando arquitetura MVC, inspirado no PHP Framework [Laravel](https://laravel.com/). Você pode saber mais sobre o projeto acessando meu [GitHub](https://github.com/getfalafel).
+Sou cofundador do FOSSDay, uma iniciativa que promove o uso de software open-source, e também já liderei o desenvolvimento de soluções personalizadas em startups e empresas de médio porte. Adoro colaborar com a comunidade tecnológica, participando de eventos e organizações como o Tchelinux.
 
-### O que me move?
-Sou vegetariano estrito, ateu convicto, entusiasta de Software Livre, ativista pelos direitos humanos, desenvolvimento sustentável e contra o abuso de animais.  
-Desde que aboli o consumo de animais, pude experimentar uma visão totalmente diferente do mundo. Nem sempre confortável, apesar da crueldade humana, o universo e as suas leis são apaixonantes e assustadoramente lindas.  
-
-Não vejo a necessidade de entidades criadoras, tudo que vejo é a beleza do acaso, das leis naturais e da vida sempre achando um jeito de preencher os vazios.
-Como fã de [Star Trek](https://pt.wikipedia.org/wiki/Star_Trek) me recuso em acreditar que o futuro prometido nas histórias, com o fim das desigualdades, seja apenas um sonho. De tudo que a série nos oferece, o fim do dinheiro, da exploração animal e por consequência, o fim da fome,
-são de longe muito mais fascinantes que qualquer nave espacial.  
-
-Quando criança eu queria ser historiador ou cosmonauta, pois adorava o descobrimento, as histórias e a constante busca em entender passado e futuro. Como dá para ver, não me tornei nenhum deles. Eu escolhi tentar mudar o mundo com tecnologia.   
-
-Eu tenho como objetivo de vida lutar contra desigualdade e a exploração animal!
+Minha formação é em Sistemas de Informação pela Universidade de Caxias do Sul, e possuo domínio avançado do inglês. Também crio conteúdo técnico para compartilhar conhecimentos, por meio do meu site tomkiel.com.br e do meu canal no YouTube, TomkielTV.
 
 > A Terra é um cenário muito pequeno numa vasta arena cósmica. Pense nos rios de sangue derramados por todos aqueles generais e imperadores, para que, na sua glória e triunfo, pudessem ser senhores momentâneos de uma fração de um ponto. Pense nas crueldades sem fim infligidas pelos moradores de um canto deste pixel aos praticamente indistinguíveis moradores de algum outro canto, quão frequentes seus desentendimentos, quão ávidos de matar uns aos outros, quão veementes os seus ódios.  
 > [Carl Sagan](https://pt.wikipedia.org/wiki/Carl_Sagan)

@@ -9,7 +9,7 @@ categories:
 image: "images/comprar_curtidas_prejudica_sua_fanpage.png"
 ---
 
-> It is what everyone wants when creating a page on facebook, whether for personal, fun u brand representation on social media. One has a wrong perception that what matters is the numbers and not what they mean. as it was in the past with “ [*Internet button*](”https:https://pt.wikipedia.org/wiki/Bolha_da_Internet”)”, these non-organic strategies can mean the failure of many companies. n It is important to warn that it is not a personal opinion isolated u pure achismo. it is very easy to identify the flaws of this system by simply accessing the page and checking the latest posts. through embedded reports, generated on the platform itself, we can further strengthen the argument. 
+> It is what everyone wants when creating a page on facebook, whether for personal, fun u brand representation on social media. One has a wrong perception that what matters is the numbers and not what they mean. as it was in the past with “[*Internet button*](https:https://pt.wikipedia.org/wiki/Bolha_da_Internet)”, these non-organic strategies can mean the failure of many companies. n It is important to warn that it is not a personal opinion isolated u pure achismo. it is very easy to identify the flaws of this system by simply accessing the page and checking the latest posts. through embedded reports, generated on the platform itself, we can further strengthen the argument. 
 
 ### The operation of Facebook
 

@@ -6,7 +6,7 @@ enableRobotsTXT = true
 [languages]
 [languages.pt-br]
 title = "Regis Tomkiel"
-biography = "Sou desenvolvedor de software, criador de conteúdo, vegetariano estrito, desenvolvedor e entusiasta de Software Livre/Open Source."
+biography = "Sou desenvolvedor de software e entusiasta de Software Livre/Open Source na horas vagas."
 description = ""
 pexelsBiography = "Conheça mais sobre mim com minhas fotos no Pexels (Sem royalties)."
 languageCode = "pt-br"
@@ -29,7 +29,7 @@ url = "/"
 
 [languages.en]
 title = "Regis Tomkiel"
-biography = "I'm a Software Developer, content creator, strict vegetarian, Free Software/Open Source developer and enthusiast."
+biography = "I'm a software developer and Free/Open Source enthusiast in my free time."
 description = ""
 pexelsBiography = "Know more about me with my photos on Pexels (No royalties)"
 languageCode = "en"
@@ -52,7 +52,7 @@ url = "/"
 
 [languages.pl-pl]
 title = "Regis Tomkiel"
-biography = "Jestem programistą, twórcą treści, wegetarianinem, programistą Wolnego Oprogramowania/Open Source i entuzjastą."
+biography = "W wolnym czasie jestem programistą i entuzjastą Wolnego/Otwartego Oprogramowania."
 description = ""
 pexelsBiography = "Zobacz więcej o mnie z moimi zdjęciami na Pexels (Bez praw autorskich)"
 languageCode = "pl-pl"
@@ -86,7 +86,7 @@ category = "categories"
 author = "Regis Tomkiel"
 avatar = "tomkiel"
 avatarFallback = "https://avatars2.githubusercontent.com/u/15989303?s=400&u=9eb0f3fdfa13bc817d392cecd23966f4ec51fea2&v=4"
-gravatar = "https://s.gravatar.com/avatar/03bfd85dd34f821bf412a52ad89d0ef7?s=80=g"
+gravatar = "https://1.gravatar.com/avatar/d3f106548d6d0c62e817c5884a9474583564a8625693df35726a22b890ba765f?s=400&d=mm"
 email = "me@tomkiel.com.br"
 city = "Caxias do Sul"
 image = "images/tomkiel.jpg"
